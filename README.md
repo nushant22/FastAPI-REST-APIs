@@ -1,4 +1,4 @@
-\# FastAPI Practice 🚀
+# FastAPI Practice 🚀
 
 
 
@@ -6,27 +6,27 @@ This repository contains my FastAPI practice project where I explore backend dev
 
 
 
-\## 📌 Purpose
+## 📌 Purpose
 
-\- Learn FastAPI fundamentals
+- Learn FastAPI fundamentals
 
-\- Build RESTful APIs
+- Build RESTful APIs
 
-\- Understand backend project structure
+- Understand backend project structure
 
-\- Practice Git \& GitHub workflow
+- Practice Git \& GitHub workflow
 
 
 
-\## 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-\- Python
+- Python
 
-\- FastAPI
+- FastAPI
 
-\- Uvicorn
+- Uvicorn
 
-\- Virtual Environment (venv)
+- Virtual Environment (venv)
 
 
 
