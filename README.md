@@ -8,7 +8,7 @@ A collection of FastAPI-REST-APIs and exercises demonstrating modern Python web 
 
 ## 🎯 About
 
-This repository showcases my journey learning FastAPI - a modern, fast (high-performance) web framework for building APIs with Python 3.9+ based on standard Python type hints. Each project demonstrates different aspects of API development from basic CRUD operations to advanced features like authentication, database integration, and real-time capabilities.
+This repository showcases my journey learning FastAPI - a modern, fast (high-performance) web framework for building APIs with Python 3.9+ based on standard Python type hints. This project demonstrates different aspects of API development from basic CRUD operations to advanced features like database integration, and real-time capabilities.
 
 **Why FastAPI?**
 - ⚡ High performance - comparable to NodeJS and Go
@@ -41,25 +41,10 @@ This repository showcases my journey learning FastAPI - a modern, fast (high-per
 - API versioning
 
 
----
-
-### 2. User Authentication System
-**Description**: JWT-based authentication and authorization  
-**Features**:
-- User registration and login
-- Password hashing with bcrypt
-- JWT token generation and validation
-- Protected routes with dependencies
-
-**Concepts**: 
-- OAuth2 with Password flow
-- Security best practices
-- Token-based authentication
-
 
 ---
 
-### 3. Database Integration (SQLAlchemy)
+### 2. Database Integration (SQLAlchemy)
 **Description**: API with PostgreSQL/MySQL database  
 **Features**:
 - Database connection and session management
@@ -75,87 +60,20 @@ This repository showcases my journey learning FastAPI - a modern, fast (high-per
 
 ---
 
-### 4. Todo API with Full Features
+### 3. Todo API with Full Features
 **Description**: Production-ready Todo application API  
 **Features**:
 - Complete CRUD operations
-- User authentication
 - Database persistence
 - Input validation
 - Error handling
 - API documentation
 
-**Tech Stack**: FastAPI + SQLAlchemy + PostgreSQL + JWT
+**Tech Stack**: FastAPI + SQLAlchemy + PostgreSQL 
 
 
 ---
 
-### 5. File Upload/Download API
-**Description**: Handle file uploads and serve files  
-**Features**:
-- Multiple file upload
-- File type validation
-- Image processing (resize, compress)
-- Serve static files
-- Download endpoints
-
-**Concepts**:
-- File handling in FastAPI
-- Static file serving
-- Streaming responses
-
-
----
-
-### 6. WebSocket Real-time Chat
-**Description**: Real-time bidirectional communication  
-**Features**:
-- WebSocket connections
-- Real-time message broadcasting
-- Connection management
-- Chat rooms
-
-**Concepts**:
-- WebSocket protocol
-- Async programming
-- Real-time communication
-
-
----
-
-### 7. Background Tasks & Celery
-**Description**: Asynchronous task processing  
-**Features**:
-- Background task execution
-- Email sending
-- Report generation
-- Scheduled tasks
-
-**Concepts**:
-- Background tasks
-- Task queues (Celery)
-- Redis as message broker
-
-
----
-
-### 8. API Rate Limiting & Caching
-**Description**: Performance optimization techniques  
-**Features**:
-- Rate limiting per user/IP
-- Redis caching
-- Response caching
-- Request throttling
-
-**Concepts**:
-- Middleware implementation
-- Caching strategies
-- Performance optimization
-
-
----
-
-*[Add more projects as you build them]*
 
 ## ✨ Features Demonstrated
 
@@ -170,15 +88,10 @@ This repository showcases my journey learning FastAPI - a modern, fast (high-per
 - ✅ Status codes and response models
 
 ### Advanced Features
-- 🔐 Authentication & Authorization (JWT, OAuth2)
 - 💾 Database integration (SQLAlchemy ORM)
-- 📁 File handling (upload/download)
-- 🔌 WebSocket support for real-time features
-- ⚡ Background tasks & async processing
 - 🚦 Middleware (CORS, rate limiting, logging)
 - 📊 API versioning
 - 🧪 Testing with pytest
-- 🐳 Docker containerization
 - 📝 API documentation best practices
 
 ## 🛠️ Technologies Used
@@ -189,12 +102,7 @@ This repository showcases my journey learning FastAPI - a modern, fast (high-per
 | **Uvicorn** | ASGI server |
 | **Pydantic** | Data validation |
 | **SQLAlchemy** | ORM for database |
-| **Alembic** | Database migrations |
 | **PostgreSQL/MySQL** | Relational database |
-| **Redis** | Caching & message broker |
-| **JWT** | Authentication tokens |
-| **Pytest** | Testing framework |
-| **Docker** | Containerization |
 
 ## 📦 Installation
 
@@ -202,7 +110,6 @@ This repository showcases my journey learning FastAPI - a modern, fast (high-per
 - Python 3.9 or higher
 - pip (Python package manager)
 - PostgreSQL/MySQL (for database projects)
-- Redis (for caching/background tasks)
 - Git
 
 ### Setup Instructions
@@ -236,8 +143,6 @@ cp .env.example .env
 
 # Edit .env with your configuration
 # DATABASE_URL=postgresql://user:password@localhost/dbname
-# SECRET_KEY=your-secret-key-here
-# REDIS_URL=redis://localhost:6379
 ```
 
 5. **Set up database** (for projects requiring database)
@@ -322,68 +227,32 @@ DELETE /api/v1/items/{id}     # Delete item
 ## 📂 Project Structure
 
 ```
-FastAPI-REST-APIs/
+FASTAPI-REST-APIs/
 │
-├── 01_basic_crud/
-│   ├── main.py              # Application entry point
-│   ├── models.py            # Pydantic models
-│   ├── routes.py            # API routes
-│   └── README.md            # Project-specific docs
+├── frontend/                      # Frontend (React)
+│   ├── public/
+│   │   ├── index.html             # HTML entry point
+│   │   └── manifest.json          # Web app metadata
+│   │
+│   ├── src/
+│   │   ├── App.js                 # Root React component
+│   │   ├── App.css                # Global app styles
+│   │   ├── index.js               # React DOM entry
+│   │   ├── index.css              # Base CSS styles
+│   │   ├── TaglineSection.js      # Tagline UI component
+│   │   └── TaglineSection.css     # Tagline component styles
+│   │
+│   ├── package.json               # Frontend dependencies & scripts
+│   └── package-lock.json          # Locked dependency versions
 │
-├── 02_authentication/
-│   ├── main.py
-│   ├── auth/
-│   │   ├── jwt.py          # JWT handling
-│   │   ├── hashing.py      # Password hashing
-│   │   └── dependencies.py # Auth dependencies
-│   ├── models.py
-│   └── routes.py
-│
-├── 03_database_integration/
-│   ├── main.py
-│   ├── database.py         # Database connection
-│   ├── models.py           # SQLAlchemy models
-│   ├── schemas.py          # Pydantic schemas
-│   ├── crud.py             # CRUD operations
-│   └── alembic/            # Database migrations
-│
-├── requirements.txt         # Python dependencies
-├── .env.example            # Environment variables template
-├── docker-compose.yml      # Docker configuration
-└── README.md               # This file
-```
+├── .gitignore                     # Git ignore rules
+├── main.py                        # FastAPI app entry point
+├── database.py                    # Database connection setup
+├── models.py                      # SQLAlchemy models
+├── database_models.py             # Database schema definitions
+├── requirements.txt               # Python dependencies
+├── README.md                      # Project documentation
 
-## 🧪 Testing
-
-Each project includes tests using pytest:
-
-```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=.
-
-# Run specific test file
-pytest tests/test_api.py
-
-# Run with verbose output
-pytest -v
-```
-
-## 🐳 Docker Deployment
-
-Build and run with Docker:
-
-```bash
-# Build image
-docker build -t FastAPI-REST-APIs .
-
-# Run container
-docker run -p 8000:8000 FastAPI-REST-APIs
-
-# Or use docker-compose
-docker-compose up -d
 ```
 
 ## 📖 Learning Resources
@@ -408,14 +277,8 @@ Through these FastAPI projects, I've gained:
 
 - ✅ Modern Python web development skills
 - ✅ RESTful API design principles
-- ✅ Asynchronous programming with async/await
 - ✅ Database design and ORM usage
-- ✅ Authentication and security best practices
 - ✅ API testing and documentation
-- ✅ Performance optimization techniques
-- ✅ Deployment and containerization
-- ✅ Real-time communication with WebSockets
-- ✅ Background task processing
 
 ## 🤝 Contributing
 
