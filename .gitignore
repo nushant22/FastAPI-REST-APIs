@@ -13,3 +13,7 @@ env/
 # Editor settings
 .vscode/
 .idea/
+
+# Node modules
+node_modules/
+
