@@ -40,7 +40,6 @@ This repository showcases my journey learning FastAPI - a modern, fast (high-per
 - HTTP status codes
 - API versioning
 
-📂 [View Code](./01_basic_crud/)
 
 ---
 
@@ -57,7 +56,6 @@ This repository showcases my journey learning FastAPI - a modern, fast (high-per
 - Security best practices
 - Token-based authentication
 
-📂 [View Code](./02_authentication/)
 
 ---
 
@@ -74,7 +72,6 @@ This repository showcases my journey learning FastAPI - a modern, fast (high-per
 - Connection pooling
 - Transaction management
 
-📂 [View Code](./03_database_integration/)
 
 ---
 
@@ -90,7 +87,6 @@ This repository showcases my journey learning FastAPI - a modern, fast (high-per
 
 **Tech Stack**: FastAPI + SQLAlchemy + PostgreSQL + JWT
 
-📂 [View Code](./04_todo_api/)
 
 ---
 
@@ -108,7 +104,6 @@ This repository showcases my journey learning FastAPI - a modern, fast (high-per
 - Static file serving
 - Streaming responses
 
-📂 [View Code](./05_file_handling/)
 
 ---
 
@@ -125,7 +120,6 @@ This repository showcases my journey learning FastAPI - a modern, fast (high-per
 - Async programming
 - Real-time communication
 
-📂 [View Code](./06_websocket_chat/)
 
 ---
 
@@ -142,7 +136,6 @@ This repository showcases my journey learning FastAPI - a modern, fast (high-per
 - Task queues (Celery)
 - Redis as message broker
 
-📂 [View Code](./07_background_tasks/)
 
 ---
 
@@ -159,7 +152,6 @@ This repository showcases my journey learning FastAPI - a modern, fast (high-per
 - Caching strategies
 - Performance optimization
 
-📂 [View Code](./08_rate_limiting/)
 
 ---
 
